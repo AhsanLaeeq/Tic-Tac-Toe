@@ -1,0 +1,184 @@
+/* Ensure full-page responsiveness */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #0d1b2a; /* Dark background for better contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Smooth font */
+}
+
+/* Center the entire content */
+.container {
+    text-align: center;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title Styling */
+.title {
+    margin-top: 10px;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px; /* Adds spacing for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Ensures spacing between elements */
+}
+
+/* Adjusted styling for the winner/tie span */
+.title span {
+    color: #26ffcb;
+    font-size: 30px; /* Reduced font size */
+    font-weight: normal; /* Makes it lighter than the title */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    margin-left: 10px; /* Adds some space between the title and the span */
+}
+
+/* Responsive Design for Span */
+@media (max-width: 768px) {
+    .title span {
+        font-size: 24px; /* Slightly smaller font for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .title span {
+        font-size: 20px; /* Even smaller font for smaller screens */
+    }
+}
+
+
+/* Reset Button */
+.reset {
+    width: 180px;
+    height: 55px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #26ffcb, #1f3540); /* Gradient for modern look */
+    font-size: 26px;
+    color: #1f3540;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Button Hover Effect */
+.reset:hover {
+    background: linear-gradient(145deg, #1f3540, #26ffcb);
+    color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(38, 255, 203, 0.5); /* Add shadow effect */
+}
+
+/* Game Board Container */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 board */
+    gap: 10px; /* Equal spacing between boxes */
+    margin: auto;
+    padding: 10px 0;
+    max-width: 360px; /* Limit board size for small screens */
+}
+
+/* Boxes Styling */
+.boxes {
+    display: flex;
+    height: 110px;
+    width: 110px;
+    background: #1f3540;
+    border: 4px solid #0f1b21;
+    border-radius: 12px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Boxes */
+.boxes:hover {
+    background: #0f1b21;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow on hover */
+}
+
+/* Active Box Styling (when clicked) */
+.boxes:active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(38, 255, 203, 0.7); /* Green glow when clicked */
+}
+
+/* Image inside boxes */
+.boxes img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .reset {
+        width: 160px;
+        font-size: 24px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .board {
+        gap: 8px;
+        padding: 5px 0;
+    }
+
+    .boxes {
+        width: 90px;
+        height: 90px;
+        font-size: 35px;
+    }
+
+    .boxes img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .reset {
+        width: 140px;
+        height: 50px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .board {
+        gap: 6px;
+        padding: 0;
+    }
+
+    .boxes {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .boxes img {
+        width: 60%;
+        height: 60%;
+    }
+}
