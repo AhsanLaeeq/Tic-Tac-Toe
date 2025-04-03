@@ -58,7 +58,7 @@ Here’s a preview of the game in action:
 - Press the **Reset** button to start a new game.
 
 ## 🌍 Live Demo:
-Check out the live version of the game [here](#).
+Check out the live version of the game [here](https://ahsanlaeeq.github.io/Tic-Tac-Toe/).
 
 ## 🚀 Future Enhancements:
 - Add a multiplayer mode (local or online).
